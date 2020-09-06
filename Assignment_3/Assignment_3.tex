@@ -288,10 +288,10 @@ Combining both the equations into a single matrix equation and constructing the 
 \end{align}
 Transforming the equation \eqref{eq:augmented_1} using row reduction,
 \begin{align}
-    \myvec{I & I & A \\ I & -I & B} \xleftrightarrow[]{R2\leftarrow\frac{R1+R2}{2}} \myvec{1 & 1 & A \\ 1 & 0 & \frac{A+B}{2}} \xleftrightarrow[]{R1\leftarrow R1-R2} \nonumber
+    \myvec{I & I & A \\ I & -I & B} \xleftrightarrow[]{R2\leftarrow\frac{R1-R2}{2}} \myvec{I & I & A \\ 0 & I & \frac{A-B}{2}} \xleftrightarrow[]{R1\leftarrow R1-R2} \nonumber
 \end{align}
 \begin{align} \label{eq:rowreduce_1}
-    \myvec{0 & I & \frac{A-B}{2} \\ I & 0 & \frac{A+B}{2}}
+    \myvec{I & 0 & \frac{A+B}{2} \\ 0 & I & \frac{A-B}{2}}
 \end{align}
 From \eqref{eq:rowreduce_1},
 \begin{align}
