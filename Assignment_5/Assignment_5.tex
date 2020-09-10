@@ -266,7 +266,11 @@ Consider 2 matrices,
     \vec{a} = \myvec{a_1 & a_2 & a_3} \quad and \quad \vec{b} = \myvec{b_1 & b_2 & b_3} \nonumber
 \end{align}
 The cross product of the 2 matrices is,
-\begin{align}
+\begin{align} \label{eq:eq_1}
     \vec{a} \times \vec{b} = \myvec{0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0} \myvec{b_1 \\ b_2 \\ b_3} 
 \end{align} 
+Substituting $a_3 = b_3 = 0$ in \eqref{eq:eq_1} and simplifying,
+\begin{align}
+    \implies \vec{a} \times \vec{b} = \myvec{0 & a_1 \\ -a_2 & 0} \myvec{b_1 \\ b_2}
+\end{align}
 \end{document}
