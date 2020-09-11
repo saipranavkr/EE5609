@@ -281,8 +281,23 @@ Substituting $a_3 = b_3 = 0$ in \eqref{eq:eq_1} and simplifying,
 \renewcommand{\thefigure}{1}
 \begin{figure}[!ht] \label{fig:triangle_abc}
 \centering
-\resizebox{\columnwidth}{!}{\input{Assignment_5_triangle.tex}}
+\resizebox{5cm}{!}{\input{Assignment_5_triangle.tex}}
 \caption{$\triangle ABC$ with B at origin}
-\end{figure}
-
+\end{figure} \\
+Considering three points on a triangle as,
+\begin{align}
+    \vec{A}=\myvec{a_1 & a_2}, \vec{B} = \myvec{0 & 0}, \vec{C} = \myvec{c_1 & c_2}
+\end{align}
+\begin{align}
+    \vec{A} - \vec{B} = \myvec{a_1 \\ a_2} - \myvec{0 \\ 0} = \myvec{a_1 \\ a_2} = \vec{A} \label{eq:eq_4}\\
+    \vec{C} - \vec{B} = \myvec{c_1 \\ c_2} - \myvec{0 \\ 0} = \myvec{c_1 \\ c_2} = \vec{C} \label{eq:eq_5}
+\end{align}
+Area of triangle is,
+\begin{align} \label{eq:eq_6}
+    Area(\triangle ABC) = \frac{1}{2}\norm{(\vec{A} - \vec{B}) \times (\vec{C} - \vec{B})}
+\end{align}
+Substituting \eqref{eq:eq_4}, \eqref{eq:eq_5} in \eqref{eq:eq_6},
+\begin{align}
+    Area(\triangle ABC) = \frac{1}{2}\norm{\vec{A} \times \vec{C}}
+\end{align}
 \end{document}
