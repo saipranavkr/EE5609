@@ -281,16 +281,13 @@ Substituting $a_3 = b_3 = 0$ in \eqref{eq:eq_1} and simplifying,
 \renewcommand{\thefigure}{1}
 \begin{figure}[!ht] \label{fig:triangle_abc}
 \centering
-\resizebox{5cm}{!}{\input{Assignment_5_Triangle.tex}}
+\resizebox{5cm}{!}{\input{Assignment_5_triangle.tex}}
 \caption{$\triangle ABC$ with B at origin}
 \end{figure} \\
-Considering three points on a triangle as,
+Considering three points $\vec{A},\vec{B},\vec{C}$ on a triangle and $\vec{B}$ at origin,
 \begin{align}
-    \vec{A}=\myvec{a_1 \\ a_2}, \vec{B} = \myvec{0 \\ 0}, \vec{C} = \myvec{c_1 \\ c_2}
-\end{align}
-\begin{align}
-    \vec{A} - \vec{B} = \myvec{a_1 \\ a_2} - \myvec{0 \\ 0} = \myvec{a_1 \\ a_2} = \vec{A} \label{eq:eq_4}\\
-    \vec{C} - \vec{B} = \myvec{c_1 \\ c_2} - \myvec{0 \\ 0} = \myvec{c_1 \\ c_2} = \vec{C} \label{eq:eq_5}
+    \vec{A} - \vec{B} = \vec{A} \label{eq:eq_4}\\
+    \vec{C} - \vec{B} = \vec{C} \label{eq:eq_5}
 \end{align}
 Area of triangle is,
 \begin{align} \label{eq:eq_6}
@@ -306,5 +303,25 @@ Constructing another triangle DBC with base as BC,
 \centering
 \resizebox{5cm}{!}{\input{Assignment_5_TwoTriangles.tex}}
 \caption{$\triangle ABC$ and $\triangle DBC$ with BC as common base}
-\end{figure}
+\end{figure} \\
+Since AD $\parallel$ BC,
+\begin{align} \label{eq:eq_7}
+    \vec{A} - \vec{D} = k(\vec{B} - \vec{C})
+\end{align}
+Now calculating the area of $\triangle DBC$,
+\begin{align} \label{eq:eq_8}
+    Area(\triangle DBC) = \frac{1}{2}\norm{(\vec{D} - \vec{B}) \times (\vec{C}- \vec{B})} 
+\end{align}
+Substituting \eqref{eq:eq_7} in \eqref{eq:eq_8},
+\begin{align}
+    \implies Area(\triangle DBC) = \frac{k}{2}\norm{\vec{D} \times (\vec{D}- \vec{A})} \nonumber \\
+    \implies Area(\triangle DBC) = \frac{k}{2}\norm{\vec{A} \times \vec{D}} \label{eq:eq_9}\\  (\because \vec{A} \times \vec{A} = 0 ; \vec{A} \times \vec{B} = -(\vec{B} \times \vec{A}))\nonumber 
+\end{align}
+Substituting \eqref{eq:eq_7} in \eqref{eq:eq_5},
+\begin{align}
+    \implies Area(\triangle ABC) = \frac{k}{2}\norm{\vec{A}\times (\vec{D} - \vec{A})} \nonumber \\
+    \implies Area(\triangle ABC) = \frac{k}{2}\norm{\vec{A}\times \vec{D}} \label{eq:eq_10}
+\end{align}
+It can be observed that \eqref{eq:eq_7} is equal \eqref{eq:eq_10}
+Hence, triangles on the same base(or equal bases) and between the same parallels are equal in area.
 \end{document}
