@@ -2,6 +2,11 @@
 %
 \usepackage{setspace}
 \usepackage{gensymb}
+\usepackage{tkz-euclide} 
+\usepackage{textcomp}
+\usepackage{standalone}
+\usetikzlibrary{calc}
+\usepackage{float}
 %\doublespacing
 \singlespacing
 
@@ -263,14 +268,21 @@ Triangles on the same base(or equal bases) and between the same parallels are eq
 \section{solution}
 Consider 2 matrices,
 \begin{align}
-    \vec{a} = \myvec{a_1 & a_2 & a_3} \quad and \quad \vec{b} = \myvec{b_1 & b_2 & b_3} \nonumber
+    \vec{A} = \myvec{a_1 & a_2 & a_3} \quad and \quad \vec{B} = \myvec{b_1 & b_2 & b_3} \nonumber
 \end{align}
 The cross product of the 2 matrices is,
 \begin{align} \label{eq:eq_1}
-    \vec{a} \times \vec{b} = \myvec{0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0} \myvec{b_1 \\ b_2 \\ b_3} 
+    \vec{A} \times \vec{B} = \myvec{0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0} \myvec{b_1 \\ b_2 \\ b_3} 
 \end{align} 
 Substituting $a_3 = b_3 = 0$ in \eqref{eq:eq_1} and simplifying,
 \begin{align}
-    \implies \vec{a} \times \vec{b} = \myvec{0 & a_1 \\ -a_2 & 0} \myvec{b_1 \\ b_2}
+    \implies \vec{A} \times \vec{B} = \myvec{0 & a_1 \\ -a_2 & 0} \myvec{b_1 \\ b_2}
 \end{align}
+\renewcommand{\thefigure}{1}
+\begin{figure}[!ht] \label{fig:triangle_abc}
+\centering
+\resizebox{\columnwidth}{!}{\input{Assignment_5_triangle.tex}}
+\caption{$\triangle ABC$ with B at origin}
+\end{figure}
+
 \end{document}
