@@ -290,11 +290,11 @@ Considering three points $\vec{A},\vec{B},\vec{C}$ on a triangle and $\vec{B}$ a
     \vec{C} - \vec{B} = \vec{C} \label{eq:eq_5}
 \end{align}
 Area of triangle is,
-\begin{align} \label{eq:eq_6}
+\begin{align} \label{eq:eq_6a}
     Area(\triangle ABC) = \frac{1}{2}\norm{(\vec{A} - \vec{B}) \times (\vec{C} - \vec{B})}
 \end{align}
-Substituting \eqref{eq:eq_4}, \eqref{eq:eq_5} in \eqref{eq:eq_6},
-\begin{align}
+Substituting \eqref{eq:eq_4}, \eqref{eq:eq_5} in \eqref{eq:eq_6a},
+\begin{align} \label{eq:eq_6b}
     \implies Area(\triangle ABC) = \frac{1}{2}\norm{\vec{A} \times \vec{C}}
 \end{align}
 Constructing another triangle DBC with base as BC,
@@ -314,14 +314,10 @@ Now calculating the area of $\triangle DBC$,
 \end{align}
 Substituting \eqref{eq:eq_7} in \eqref{eq:eq_8},
 \begin{align}
-    \implies Area(\triangle DBC) = \frac{k}{2}\norm{\vec{D} \times (\vec{D}- \vec{A})} \nonumber \\
-    \implies Area(\triangle DBC) = \frac{k}{2}\norm{\vec{A} \times \vec{D}} \label{eq:eq_9}\\  (\because \vec{A} \times \vec{A} = 0 ; \vec{A} \times \vec{B} = -(\vec{B} \times \vec{A}))\nonumber 
+    \implies Area(\triangle DBC) = \frac{1}{2}\norm{ (\vec{A}-k( \vec{B}- \vec{C}))\times( \vec{C}- \vec{B})} \nonumber \\
+    \implies Area(\triangle DBC) = \frac{1}{2}\norm{(\vec{A}+k \vec{C})\times  \vec{C} } \nonumber\\    (\because \vec{C}- \vec{B}= \vec{C})\nonumber \\
+    \implies Area(\triangle DBC) =  \frac{1}{2}\norm{\vec{A}\times  \vec{C} } (\because \vec{A} \times \vec{A} = 0 ) \label{eq:eq_9}
 \end{align}
-Substituting \eqref{eq:eq_7} in \eqref{eq:eq_5},
-\begin{align}
-    \implies Area(\triangle ABC) = \frac{k}{2}\norm{\vec{A}\times (\vec{D} - \vec{A})} \nonumber \\
-    \implies Area(\triangle ABC) = \frac{k}{2}\norm{\vec{A}\times \vec{D}} \label{eq:eq_10}
-\end{align}
-It can be observed that \eqref{eq:eq_7} is equal \eqref{eq:eq_10}
+It can be observed that \eqref{eq:eq_9} is same as \eqref{eq:eq_6b}
 Hence, triangles on the same base(or equal bases) and between the same parallels are equal in area.
 \end{document}
