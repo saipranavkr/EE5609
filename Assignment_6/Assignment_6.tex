@@ -268,36 +268,15 @@ Given equation is,
 \begin{align} \label{eq:eq_1}
     x^{2}+xy-6y^{2}-30y-36=0 
 \end{align}
-
-The general second order equation is given by,
-\begin{align} \label{eq:c1}
-    ax^2+2bxy+cy^2+2dx+2ey+f=0 
-\end{align}
-where
-\begin{align}
-    \vec{V}=\vec{V}^T&=\myvec{a & b \\ b & c} \label{eq:c3}\\
-    \vec{u}&=\myvec{d \\ e} \label{eq:c4}
-\end{align}
-The equation \eqref{eq:c1} can be expressed as
-\begin{align} \label{eq:c2}
-    \vec{x}^T\vec{V}\vec{x}+2\vec{u}^T\vec{x}+f=0
-\end{align}
-Comparing \eqref{eq:eq_1} with \eqref{eq:c1}, 
-\begin{align} \label{eq:eq_2}
-    a=1;b=\frac{1}{2};c=-6;d=0;e=-15;f=-36  
-\end{align}
+From the above equation, then following values can be found,
 \begin{align} \label{eq:eq_3}
-    \vec{V} = \myvec{1 & \frac{1}{2} \\ \frac{1}{2} & -6} \quad \vec{u} = \myvec{0 \\ -15} 
+    \vec{V} = \myvec{1 & \frac{1}{2} \\ \frac{1}{2} & -6} \quad \vec{u} = \myvec{0 \\ -15} \quad f=-36
 \end{align}
-The equation \eqref{eq:c2} represents a pair of straight lines if
-\begin{align} \label{eq:c5}
-    \mydet{\vec{V} & \vec{u} \\ \vec{u}^T & f} = 0
-\end{align}
-Substituting values from \eqref{eq:eq_2} and \eqref{eq:eq_3} in \eqref{eq:c2},
+Substituting values from \eqref{eq:eq_3} into the given equation,
 \begin{align} \label{eq:eq_4}
     \vec{x}^T\myvec{1 & \frac{1}{2} \\ \frac{1}{2} & -6}\vec{x} +2\myvec{0 & -15}\vec{x}-36=0
 \end{align}
-Substituting values from \eqref{eq:eq_2} and \eqref{eq:eq_3} in \eqref{eq:c5} to prove \eqref{eq:eq_1} represents a pair of straight lines,
+To prove \eqref{eq:eq_1} represents a pair of straight lines,
 \begin{align} 
     D = \mydet{1 & \frac{1}{2} & 0 \\ \frac{1}{2} & -6 & -15 \\ 0 & -15 & -36} \nonumber
 \end{align}
@@ -335,11 +314,13 @@ Equating their product with \eqref{eq:eq_4},
 \end{figure} \\
 The slopes of the lines are given by the polynomials,
 \begin{align}
-    cm^2+2bm+a=0 \nonumber \\
+    cm^2+2bm+a=0 \nonumber
+\end{align}
+\begin{align}
     m_i = \frac{-b\pm \sqrt{-\mydet{\vec{V}}}}{c} \label{eq:eq_13} \\
     \vec{n}_i = k_i\myvec{-m_i \\ 1}, \quad i=1,2 \label{eq:eq_14}
 \end{align}
-Substituting \eqref{eq:eq_2}, \eqref{eq:eq_3} values in the above equations,
+Substituting \eqref{eq:eq_3} values in the above equations,
 \begin{align}
     -6m^2+m+1=0 \nonumber \\
     \implies m_i = \frac{\frac{-1}{2}\pm \frac{5}{2}}{-6} \nonumber \\
