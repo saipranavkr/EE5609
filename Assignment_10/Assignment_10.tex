@@ -267,13 +267,19 @@ Given $\vec{A}$ is a $m\times n$ matrix. First converting $\vec{A}$ into row red
 \begin{align} \label{eq:eq_1}
     \vec{R^{\prime}} = \vec{P}\vec{A}
 \end{align}
-A row of $\vec{R^{\prime}}$ can be all zeroes, or can start with zeroes from the left then has a one, and can have non-zero entries after one. Suppose if we add a multiple of pivot column to any other column, it only effects the row containing the pivot(pivot is one) since all elements above and below the pivot are zeroes. So, performing a series of such actions can transform a row of all zeroes and single one(The pivot). Let $\vec{Q}$ be the sequence of elementary column operations performed on $\vec{R^{\prime}}$. So, $\vec{Q}$ is a $n\times n$ matrix. Also, by using the lemma we can tell that $\vec{Q}$ is invertible.
+A row of $\vec{R^{\prime}}$ can be all zeroes, or can start with zeroes from the left then has a one, and can have non-zero entries after one. 
+$\vec{R^{\prime}}$ is in row-reduced echelon form. To perform column operations, elementary matrices should be multiplied on the right side in order to convert the $\vec{R^{\prime}}$ into column-echelon form
 \begin{align} \label{eq:eq_2}
     \vec{R} = \vec{R^{\prime}} \vec{Q}
 \end{align}
-Substituting \eqref{eq:eq_1} in \eqref{eq:eq_2},
-\begin{align} \label{eq:eq_3}
+But performing column operations on a matrix is equivalent to performing row operations on the transposed matrix.
+\begin{align}
+    \vec{R}^T &= {(\vec{R^{\prime}} \vec{Q})}^T \nonumber \\
+    \implies \vec{R}^T &= {\vec{Q}}^T {\vec{R^{\prime}}}^T \label{eq:eq_3}
+\end{align}
+Hence, by using lemma it can be observed that ${\vec{Q}}^T$ is invertible and of the order $n\times n$. So, $\vec{Q}$ is also invertible. Converting $\vec{R}^T$ to row-reduced echelon is equivalent to converting $\vec{R}$ to column-reduced echelon. 
+\begin{align} \label{eq:eq_4}
     \vec{R} = \vec{P}\vec{A}\vec{Q}
 \end{align}
-$\vec{R}$ in \eqref{eq:eq_3} is in both row and column reduced echelon form. Hence proved.
+$\vec{R}$ in \eqref{eq:eq_4} is in both row and column reduced echelon form. Hence proved.
 \end{document}
