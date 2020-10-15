@@ -263,11 +263,10 @@ Let $A$ be a $m\times n$ matrix. Show that by a finite number of elementary row 
 Every elementary matrix is invertible and the inverse is again an elementary matrix. If an elementary matrix $E$ is obtained from I by using a certain row or column operation $q$, then $E^{-1}$ is obtained from $I$ by the "inverse" operation $q^{-1}$.
 
 \section{Solution}
-Given $\vec{A}$ is a $m\times n$ matrix. First converting $\vec{A}$ into row reduced echelon form by performing a series of elementary row operations. The elementary matrix that performs sequence of elementary operations is $\vec{P}$. Let $\vec{R^{\prime}}$ be the row reduced echelon matrix. So, $\vec{P}$ is a $m\times m$ matrix. Also, by using the lemma we can tell that $\vec{P}$ is invertible.
+Given $\vec{A}$ is a $m\times n$ matrix. Converting $\vec{A}$ into row reduced echelon form by performing a series of elementary row operations $\vec{P}$. Let $\vec{R^{\prime}}$ be the row reduced echelon matrix. Also, by using the lemma we can tell that $\vec{P}$ is invertible and order $m\times m$.
 \begin{align} \label{eq:eq_1}
     \vec{R^{\prime}} = \vec{P}\vec{A}
 \end{align}
-A row of $\vec{R^{\prime}}$ can be all zeroes, or can start with zeroes from the left then has a one, and can have non-zero entries after one. 
 $\vec{R^{\prime}}$ is in row-reduced echelon form. To perform column operations, elementary matrices should be multiplied on the right side in order to convert the $\vec{R^{\prime}}$ into column-echelon form
 \begin{align} \label{eq:eq_2}
     \vec{R} = \vec{R^{\prime}} \vec{Q}
@@ -277,7 +276,7 @@ But performing column operations on a matrix is equivalent to performing row ope
     \vec{R}^T &= {(\vec{R^{\prime}} \vec{Q})}^T \nonumber \\
     \implies \vec{R}^T &= {\vec{Q}}^T {\vec{R^{\prime}}}^T \label{eq:eq_3}
 \end{align}
-Hence, by using lemma it can be observed that ${\vec{Q}}^T$ is invertible and of the order $n\times n$. So, $\vec{Q}$ is also invertible. Converting $\vec{R}^T$ to row-reduced echelon is equivalent to converting $\vec{R}$ to column-reduced echelon. 
+Hence, by using lemma it can be observed that ${\vec{Q}}^T$ is invertible and of the order $n\times n$. Converting $\vec{R}^T$ to row-reduced echelon is equivalent to converting $\vec{R}$ to column-reduced echelon. 
 \begin{align} \label{eq:eq_4}
     \vec{R} = \vec{P}\vec{A}\vec{Q}
 \end{align}
