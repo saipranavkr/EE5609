@@ -264,9 +264,15 @@ Every elementary matrix is invertible and the inverse is again an elementary mat
 
 \section{Solution}
 Given $\vec{A}$ is a $m\times n$ matrix. Converting $\vec{A}$ into row reduced echelon form by performing a series of elementary row operations $\vec{P}$. Let $\vec{R^{\prime}}$ be the row reduced echelon matrix. Also, by using the lemma we can tell that $\vec{P}$ is invertible and order $m\times m$.
-\begin{align} \label{eq:eq_1}
-    \vec{R^{\prime}} = \vec{P}\vec{A}
+\begin{align} 
+    \vec{R^{\prime}} = \vec{P}\vec{A} \label{eq:eq_1}
 \end{align}
+where,
+\begin{align}
+    \vec{R^{\prime}} = \myvec{\vec{I} & \vec{F} \\ \vec{0} & \vec{0}} \nonumber
+    \intertext{$\vec{I}$ is an identity matrix, $\vec{F}$ is Free variables matrix and $\vec{0}$ represents a block of zeroes} 
+    \nonumber
+\end{align} 
 $\vec{R^{\prime}}$ is in row-reduced echelon form. To perform column operations, elementary matrices should be multiplied on the right side in order to convert the $\vec{R^{\prime}}$ into column-echelon form
 \begin{align} \label{eq:eq_2}
     \vec{R} = \vec{R^{\prime}} \vec{Q}
