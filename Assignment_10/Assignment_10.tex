@@ -273,7 +273,7 @@ where,
     \intertext{$\vec{I}$ is an identity matrix, $\vec{F}$ is Free variables matrix and $\vec{0}$ represents a block of zeroes} 
     \nonumber
 \end{align} 
-$\vec{R^{\prime}}$ is in row-reduced echelon form. To perform column operations, elementary matrices should be multiplied on the right side in order to convert the $\vec{R^{\prime}}$ into column-echelon form
+$\vec{R^{\prime}}$ is in row-reduced echelon form. To perform column operations, elementary matrices should be multiplied on the right side in order to convert the $\vec{R^{\prime}}$ into column-reduced echelon form
 \begin{align} \label{eq:eq_2}
     \vec{R} = \vec{R^{\prime}} \vec{Q}
 \end{align}
@@ -286,5 +286,9 @@ Hence, by using lemma it can be observed that ${\vec{Q}}^T$ is invertible and of
 \begin{align} \label{eq:eq_4}
     \vec{R} = \vec{P}\vec{A}\vec{Q}
 \end{align}
-$\vec{R}$ in \eqref{eq:eq_4} is in both row and column reduced echelon form. Hence proved.
+where,
+\begin{align}
+    \vec{R} = \myvec{\vec{I} & \vec{0} \\ \vec{0} & \vec{0}} \nonumber 
+\end{align}
+$\vec{I}$ is an identity matrix and $\vec{0}$ represents a block of zeroes. $\vec{R}$ in \eqref{eq:eq_4} is in both row and column reduced echelon form. Hence proved.
 \end{document}
