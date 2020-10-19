@@ -302,13 +302,7 @@ To convert \eqref{eq:eq_41} into row reduced echelon form, $\vec{A}$ has to be m
     \vec{P} = \myvec{1 & -5 \\ 0 & 1}\myvec{1 & 0 \\ -1 & \frac{1}{2}} = \myvec{6 & -\frac{5}{2} \\ -1 & \frac{1}{2}}  \label{eq:eq_42} \\
     \vec{R^{\prime}} = \vec{P}\vec{A} = \myvec{1 & 0 & \frac{37}{2} & -\frac{1}{2} \\ 0 & 1 & -\frac{5}{2} & \frac{1}{2}} \label{eq:eq_43}
 \end{align}
-$\vec{R^{\prime}}$ is in row reduced echelon form. To convert \eqref{eq:eq_43} into column-reduced echelon form, elementary operations have to be performed on ${\vec{R^{\prime}}}^T$
-\begin{align}
-    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \frac{-37}{2} & 0 & 1 & 0 \\ 0 & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ \frac{37}{2} & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} \nonumber \\
-    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \frac{1}{2} & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ 0 & \frac{1}{2}} \nonumber \\
-    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & \frac{5}{2} & 1 & 0 \\ 0 & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ 0 & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & \frac{1}{2}} \nonumber \\
-    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -\frac{1}{2} & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & 0} \label{eq:eq_44}
-\end{align}
+$\vec{R^{\prime}}$ is in row reduced echelon form. To convert \eqref{eq:eq_43} into column-reduced echelon form, elementary operations have to be performed on ${\vec{R^{\prime}}}^T$. 
 By multiplying all the elementary matrices,
 \begin{align} 
     \vec{Q}^T = \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -\frac{37}{2} & \frac{5}{2} & 1 & 0 \\ \frac{1}{2} & -\frac{1}{2} & 0 & 1} \label{eq:eq_45} \\
