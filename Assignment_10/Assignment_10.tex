@@ -288,7 +288,39 @@ Hence, by using lemma it can be observed that ${\vec{Q}}^T$ is invertible and of
 \end{align}
 where,
 \begin{align}
-    \vec{R} = \myvec{\vec{I} & \vec{0} \\ \vec{0} & \vec{0}} \nonumber 
+    \vec{R} = \myvec{\vec{I} & \vec{0} \\ \vec{0} & \vec{0}} \nonumber \\
 \end{align}
 $\vec{I}$ is an identity matrix and $\vec{0}$ represents a block of zeroes. $\vec{Q}$ is a upper triangular matrix. $\vec{R}$ in \eqref{eq:eq_4} is in both row and column reduced echelon form. Hence proved.
+
+\section{Example}
+Let,
+\begin{align} \label{eq:eq_41}
+    \vec{A} = \myvec{1 & 5 & 6 & 2 \\ 2 & 12 & 7 & 5}
+\end{align}
+To convert \eqref{eq:eq_41} into row reduced echelon form, $\vec{A}$ has to be multiplied by $\vec{P}$
+\begin{align}
+    \vec{P} = \myvec{1 & -5 \\ 0 & 1}\myvec{1 & 0 \\ -1 & \frac{1}{2}} = \myvec{6 & -\frac{5}{2} \\ -1 & \frac{1}{2}}  \label{eq:eq_42} \\
+    \vec{R^{\prime}} = \vec{P}\vec{A} = \myvec{1 & 0 & \frac{37}{2} & -\frac{1}{2} \\ 0 & 1 & -\frac{5}{2} & \frac{1}{2}} \label{eq:eq_43}
+\end{align}
+$\vec{R^{\prime}}$ is in row reduced echelon form. To convert \eqref{eq:eq_43} into column-reduced echelon form, elementary operations have to be performed on ${\vec{R^{\prime}}}^T$
+\begin{align}
+    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ \frac{-37}{2} & 0 & 1 & 0 \\ 0 & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ \frac{37}{2} & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} \nonumber \\
+    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \frac{1}{2} & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ -\frac{1}{2} & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ 0 & \frac{1}{2}} \nonumber \\
+    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & \frac{5}{2} & 1 & 0 \\ 0 & 0 & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & -\frac{5}{2} \\ 0 & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & \frac{1}{2}} \nonumber \\
+    \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -\frac{1}{2} & 0 & 1} \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & \frac{1}{2}} &= \myvec{1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & 0} \label{eq:eq_44}
+\end{align}
+By multiplying all the elementary matrices,
+\begin{align} 
+    \vec{Q}^T = \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -\frac{37}{2} & \frac{5}{2} & 1 & 0 \\ \frac{1}{2} & -\frac{1}{2} & 0 & 1} \label{eq:eq_45} \\
+    \implies \vec{Q} = \myvec{1 & 0 & -\frac{37}{2} & \frac{1}{2} \\ 0 & 1 & \frac{5}{2} & -\frac{1}{2} \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1} \label{eq:eq_46}
+\end{align}
+So $\vec{P}\vec{A}\vec{Q}$ is in both row-reduced and column-reduced echelon form.
+\begin{align} \label{eq:eq_47}
+    \vec{R} = \vec{P}\vec{A}\vec{Q} = \myvec{1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0}
+\end{align}
+The inverses of $\vec{P}$ and $\vec{Q}$ are,
+\begin{align} \label{eq:eq_48}
+    \vec{P}^{-1} = \myvec{1 & 5 \\ 2 & 12}; \quad 
+    \vec{Q}^{-1} = \myvec{1 & 0 & \frac{37}{2} & -\frac{1}{2} \\ 0 & 1 & -\frac{5}{2} & \frac{1}{2} \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1}
+\end{align}
 \end{document}
