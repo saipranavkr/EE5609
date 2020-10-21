@@ -270,11 +270,23 @@ A set are vectors $\{\vec{v_1},\vec{v_2},\vec{v_3}\}$ are linearly independent i
     a\vec{v_1} + b\vec{v_2} + c\vec{v_3} = 0 \label{eq:eq_2}
     \intertext{has only one trivial solution} a = b = c = 0 \label{eq:eq_3}
 \end{align}
-Now taking $a=b=c=1$,
+Now,
 \begin{align}
-    1(\alpha + \beta) + 1(\beta + \gamma) + 1(\gamma + \alpha) = \nonumber \\
-    (1+1)\alpha + (1+1)\beta + (1+1)\gamma = \nonumber \\
-    0 + 0 + 0 = 0 \label{eq:eq_4}
+    a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0 \label{eq:eq_4} \\
+    (a+c)\alpha + (a+b)\beta + (b+c)\gamma = 0 \label{eq:eq_5}
 \end{align}
-From \eqref{eq:eq_4} it can be shown that $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly dependent
+From \eqref{eq:eq_5}, since $\alpha$, $\beta$ and $\gamma$ are linearly independent vectors, hence the only solution is 
+\begin{align}
+    a+c = a+b = b+c = 0 \label{eq:eq_6}
+\end{align}
+From \eqref{eq:eq_1}, the possible values of $a, b, c$ are,
+\begin{align}
+    a = b = c = 0; \label{eq:eq_7} \\
+    a = b = c = 1; \label{eq:eq_8}
+\end{align}
+If \eqref{eq:eq_8} is a solution, then \eqref{eq:eq_4}
+\begin{align}
+    a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0
+\end{align}
+has a solution $a = b = c = 1$, which is not the trivial solution. Hence, $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly dependent.
 \end{document}
