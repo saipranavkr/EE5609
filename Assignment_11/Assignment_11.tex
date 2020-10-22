@@ -273,18 +273,23 @@ A set are vectors $\{\vec{v_1},\vec{v_2},\vec{v_3}\}$ are linearly independent i
 Now,
 \begin{align}
     a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0 \label{eq:eq_4} \\
-    (a+c)\alpha + (a+b)\beta + (b+c)\gamma = 0 \label{eq:eq_5}
+    \implies (a+c)\alpha + (a+b)\beta + (b+c)\gamma &= 0 \label{eq:eq_5}
 \end{align}
-From \eqref{eq:eq_5}, since $\alpha$, $\beta$ and $\gamma$ are linearly independent vectors, hence the only solution is 
+Writing \eqref{eq:eq_5} in matrix form,
 \begin{align}
-    a+c = a+b = b+c = 0 \label{eq:eq_6}
+    \myvec{a+c & 0 & 0 \\ 0 & a+b & 0 \\ 0 & 0 & b+c}\myvec{\alpha \\
+    \beta \\ \gamma} = \myvec{0 \\ 0 \\ 0} \label{eq:eq_6}
+\end{align}
+In \eqref{eq:eq_6}, since $\alpha$, $\beta$ and $\gamma$ are linearly independent vectors, hence the only solution is 
+\begin{align}
+    a+c = 0; \quad a+b = 0; \quad b+c = 0 \label{eq:eq_7}
 \end{align}
 From \eqref{eq:eq_1}, the possible values of $a, b, c$ are,
 \begin{align}
-    a = b = c = 0; \label{eq:eq_7} \\
-    a = b = c = 1; \label{eq:eq_8}
+    a = b = c = 0; \label{eq:eq_8} \\
+    a = b = c = 1; \label{eq:eq_9}
 \end{align}
-If \eqref{eq:eq_8} is a solution, then \eqref{eq:eq_4}
+If \eqref{eq:eq_9} is a solution, then \eqref{eq:eq_4}
 \begin{align}
     a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0
 \end{align}
