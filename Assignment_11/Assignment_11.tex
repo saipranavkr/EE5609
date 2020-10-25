@@ -275,23 +275,46 @@ Now,
     a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0 \label{eq:eq_4} \\
     \implies (a+c)\alpha + (a+b)\beta + (b+c)\gamma &= 0 \label{eq:eq_5}
 \end{align}
-Writing \eqref{eq:eq_5} in matrix form,
+Let,
 \begin{align}
-    \myvec{a+c & 0 & 0 \\ 0 & a+b & 0 \\ 0 & 0 & b+c}\myvec{\alpha \\
-    \beta \\ \gamma} = \myvec{0 \\ 0 \\ 0} \label{eq:eq_6}
+    \vec{A_1} = \myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0}; \:
+    \vec{A_2} = \myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0}; \:
+    \vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} \nonumber
 \end{align}
-In \eqref{eq:eq_6}, since $\alpha$, $\beta$ and $\gamma$ are linearly independent vectors, hence the only solution is 
+\begin{align} \label{eq:eq_6}
+    \implies a\vec{A_1} + b\vec{A_2} + c\vec{A_3} = \nonumber \\
+    a\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
+    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} +
+    c\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1}
+\end{align}
+Now,
 \begin{align}
-    a+c = 0; \quad a+b = 0; \quad b+c = 0 \label{eq:eq_7}
+    a\vec{A_1} + b\vec{A_2} + c\vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} \label{eq:eq_7} \\
+    \implies a = b = c = 0 \label{eq:eq_8}
 \end{align}
-From \eqref{eq:eq_1}, the possible values of $a, b, c$ are,
+From \eqref{eq:eq_7}, $\vec{A_1}, \vec{A_2}$ and $\vec{A_3}$ are linearly independent. Now, rewriting \eqref{eq:eq_5} as,
 \begin{align}
-    a = b = c = 0; \label{eq:eq_8} \\
-    a = b = c = 1; \label{eq:eq_9}
+    (a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \nonumber \\
+    (a+c)\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
+    (a+b)\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + \nonumber \\
+    (b+c)\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} = \nonumber
 \end{align}
-If \eqref{eq:eq_9} is a solution, then \eqref{eq:eq_4}
 \begin{align}
-    a(\alpha + \beta) + b(\beta + \gamma) + c(\gamma + \alpha) = 0
+    a\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
+    c\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + \nonumber \\
+    a\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + 
+    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + \nonumber \\
+    b\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} +
+    c\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} = \nonumber
 \end{align}
-has a solution $a = b = c = 1$, which is not the trivial solution. Hence, $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly dependent.
+\begin{align}
+    \implies(a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \nonumber \\ a\myvec{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + 
+    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} + \nonumber \\
+    c\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} \label{eq:eq_9}
+\end{align}
+For $a = b = c = 1$, using properties from \eqref{eq:eq_1},  \eqref{eq:eq_9} becomes,
+\begin{align}
+    (a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} \label{eq:eq_10}
+\end{align}
+Since it is not the trivial solution. Hence, $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly dependent.
 \end{document}
