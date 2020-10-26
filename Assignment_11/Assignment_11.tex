@@ -277,7 +277,12 @@ Now,
 \end{align}
 Writing \eqref{eq:eq_5} in matrix form,
 \begin{align}
-    \myvec{a+c \\ a+b \\ b+c}^T \myvec{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} \myvec{\alpha \\ \beta \\ \gamma} = 0
+    \vec{x}^T\vec{V}\vec{y} = 0 \nonumber \\
+    \implies \myvec{a \\ b \\ c}^T \myvec{1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1} \myvec{\alpha \\ \beta \\ \gamma} = 0 
+\end{align}
+where,
+\begin{align}
+    \vec{x} = \myvec{a & b & c}; \quad \vec{y} = \myvec{\alpha \\ \beta \\ \gamma} \nonumber
 \end{align}
 Let,
 \begin{align}
