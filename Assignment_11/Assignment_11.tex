@@ -277,53 +277,34 @@ Now,
 \end{align}
 Writing \eqref{eq:eq_5} in matrix form,
 \begin{align}
-    \vec{x}^T\vec{V}\vec{y} = 0 \nonumber \\
-    \implies \myvec{a \\ b \\ c}^T \myvec{1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1} \myvec{\alpha \\ \beta \\ \gamma} = 0 
+    \myvec{\alpha & \beta & \gamma} \myvec{1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1} \vec{x} = 0
 \end{align}
 where,
 \begin{align}
-    \vec{x} = \myvec{a & b & c}; \quad \vec{y} = \myvec{\alpha \\ \beta \\ \gamma} \nonumber
-\end{align}
-Let,
-\begin{align}
-    \vec{A_1} = \myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0}; \:
-    \vec{A_2} = \myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0}; \:
-    \vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} \nonumber
-\end{align}
-\begin{align} \label{eq:eq_6}
-    \implies a\vec{A_1} + b\vec{A_2} + c\vec{A_3} = \nonumber \\
-    a\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
-    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} +
-    c\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1}
-\end{align}
-Now,
-\begin{align}
-    a\vec{A_1} + b\vec{A_2} + c\vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} \label{eq:eq_7} \\
-    \implies a = b = c = 0 \label{eq:eq_8}
-\end{align}
-From \eqref{eq:eq_7}, $\vec{A_1}, \vec{A_2}$ and $\vec{A_3}$ are linearly independent. Now, rewriting \eqref{eq:eq_5} as,
-\begin{align}
-    (a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \nonumber \\
-    (a+c)\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
-    (a+b)\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + \nonumber \\
-    (b+c)\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} = \nonumber
+    \vec{x} = \myvec{a \\ b \\ c} \nonumber
 \end{align}
 \begin{align}
-    a\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + 
-    c\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} + \nonumber \\
-    a\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + 
-    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + \nonumber \\
-    b\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} +
-    c\myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} = \nonumber
+    \vec{x}^T \myvec{1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1} \myvec{\alpha \\ \beta \\ \gamma} = 0
 \end{align}
+Since $\alpha$, $\beta$ and $\gamma$ are linearly independent vectors,
 \begin{align}
-    \implies(a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \nonumber \\ a\myvec{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0} + 
-    b\myvec{0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} + \nonumber \\
-    c\myvec{1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1} \label{eq:eq_9}
+    \vec{x}^T \myvec{1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1} = \myvec{0 & 0 & 0}
 \end{align}
-For $a = b = c = 1$, using properties from \eqref{eq:eq_1},  \eqref{eq:eq_9} becomes,
+Transposing on both sides,
+\begin{align} \label{eq:eq_9}
+    \myvec{1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1} \vec{x} = 0
+\end{align}
+By using the properties from \eqref{eq:eq_1} and reducing \eqref{eq:eq_9} to row echelon form,
 \begin{align}
-    (a+c)\vec{A_1} + (a+b)\vec{A_2} + (b+c)\vec{A_3} = \myvec{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} \label{eq:eq_10}
+    \myvec{1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1} \xleftrightarrow[]{R_2\leftarrow R_1+R_2} \myvec{1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 1 & 1 } \nonumber \\ \xleftrightarrow[]{R_3\leftarrow R_2+R_3} \myvec{1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0} \label{eq:eq_10}
 \end{align}
-Since it is not the trivial solution. Hence, $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly dependent.
+From \eqref{eq:eq_10},
+\begin{align} \label{eq:eq_11}
+    a+c = 0; \quad b+c = 0
+\end{align}
+The solutions to \eqref{eq:eq_11} are,
+\begin{align}
+    a=b=c=0; \quad a=b=c=1
+\end{align}
+Since there is no trivial solution, $(\alpha + \beta)$, $(\beta + \gamma)$ and $(\gamma + \alpha)$ are linearly independent
 \end{document}
