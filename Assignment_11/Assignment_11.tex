@@ -298,9 +298,11 @@ By using the properties from \eqref{eq:eq_1} and reducing \eqref{eq:eq_9} to row
 \begin{align}
     \myvec{1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1} \xleftrightarrow[]{R_2\leftarrow R_1+R_2} \myvec{1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 1 & 1 } \nonumber \\ \xleftrightarrow[]{R_3\leftarrow R_2+R_3} \myvec{1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0} \label{eq:eq_10}
 \end{align}
-From \eqref{eq:eq_10},
-\begin{align} \label{eq:eq_11}
-    a+c = 0; \quad b+c = 0
+Expressing \eqref{eq:eq_10} as a linear combination of vectors,
+\begin{align}
+    a \myvec{1 \\ 0 \\ 0} + b \myvec{0 \\ 1 \\ 0} + c \myvec{1 \\ 1 \\ 0} = \myvec{0 \\ 0 \\ 0} \nonumber \\
+    \implies \myvec{a+c \\ b+c \\ 0} = \myvec{0 \\ 0 \\ 0} \nonumber \\
+    \implies a+c = 0; \quad b+c = 0 \label{eq:eq_11}
 \end{align}
 The solutions to \eqref{eq:eq_11} are,
 \begin{align}
