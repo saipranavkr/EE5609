@@ -262,31 +262,28 @@ Find the range, rank, null space, and nullity for the zero transformation and th
 %
 %
 \section{Solution}
-Suppose vector space $\vec{V}$ has dimension n. Table \ref{table:1} provides the properties of range, rank, null space and nullity of zero and identity transformation on a vector space $\vec{V}$
+Suppose vector space $\vec{V}$ has dim$(\vec{V})$ = n. Table \ref{table:1} provides the properties of range, rank, null space and nullity of zero and identity transformation on a vector space $\vec{V}$
 \begin{table*}[ht!]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
 
-\multicolumn{3}{|c|}{$\vec{v}^T = \myvec{v_1 & v_2 & \cdots & v_n}$} \\[1ex]
-\hline
-
 \textbf{Properties} & \textbf{Zero Transformation} & \textbf{Identity Transformation} \\[1ex]
 \hline
 
-Transformation & $T_0\vec{v} = \myvec{0 \\ 0 \\ \vdots \\ 0}$ & $T_I\vec{v} = \myvec{v_1 \\ v_2 \\ \vdots \\ v_n}$ \\[0.5ex] 
+Transformation & $T_0(\vec{v}) = \vec{0}$ & $T_I(\vec{v}) = \vec{v}$ \\[0.5ex] 
 \hline
 
-Range & Zero subspace \{0\} & whole vector space $\vec{V}$\\[0.5ex] 
+Range & Zero subspace \{0\} & $\vec{V}$\\[0.5ex] 
 \hline
 
-Rank & Zero & n \\[0.5ex]
+Rank & dim$(\vec{0})$ = 0 & dim$(\vec{V})$ = n \\[0.5ex]
 \hline
 
-Null space & whole vector space $\vec{V}$ & Zero subspace \{0\} \\[0.5ex]
+Null space & $\vec{V}$ & Zero subspace \{0\} \\[0.5ex]
 \hline
 
-Nullity & whole vector space $\vec{V}$ & Zero subspace \{0\} \\ & $\implies n$ & $\implies 0$ \\ [0.5ex] 
+Nullity & dim$(\vec{V})$ = n & dim$(\vec{0})$ = 0 \\ [0.5ex] 
 \hline
 \end{tabular}
 \caption{Properties of Zero and Identity transformation}
@@ -296,7 +293,7 @@ Nullity & whole vector space $\vec{V}$ & Zero subspace \{0\} \\ & $\implies n$ &
 \end{table*}
 
 \section{Example}
-Let $T_0$, $T_I$ be the zero and identity transformation on the vector space $\vec{V}$ of dimension 2. Let,
+Let $T_0$, $T_I$ be the zero and identity transformation on the vector space $\vec{V}$ such that dim$(\vec{V})$ = 2. Let,
 \begin{align}
     \vec{v} = \myvec{v_1 \\ v_2} \nonumber
 \end{align}
@@ -304,10 +301,10 @@ be a vector in $\vec{V}$. Now,
 \begin{align} \label{eq:eq_1}
     T_0\vec{v} = \myvec{0 \\ 0}
 \end{align}
-From \eqref{eq:eq_1} we can tell that, it has range of \{0\}, Rank of Zero, Null space as $\vec{V}$ and nullity as 2(The dimension of $\vec{V}$)
+From \eqref{eq:eq_1} we can tell that, it has range of \{0\}, Rank of Zero, Null space as $\vec{V}$ and nullity as 2 ($\because$dim$(\vec{V})$ = 2)
 Now,
 \begin{align} \label{eq:eq_2}
     T_I\vec{v} = \myvec{v_1 \\ v_2}
 \end{align}
-From \eqref{eq:eq_2} we can tell that, it has range of $\vec{V}$, Rank of 2, Null space as \{0\} and nullity as 0(The dimension of zero subspace). Because  identity transformation is the transformation $T_I: \vec{R}_n \rightarrow \vec{R}_n$ defined by $T_I(x) = x$ for every vector $x$ 
+From \eqref{eq:eq_2} we can tell that, it has range of $\vec{V}$, Rank of 2, Null space as \{0\} and nullity as $\vec{0}$($\because$dim$(\vec{0})$ = 0). Because  identity transformation is the transformation $T_I: \vec{R}_n \rightarrow \vec{R}_n$ defined by $T_I(x) = x$ for every vector $x$ 
 \end{document}
