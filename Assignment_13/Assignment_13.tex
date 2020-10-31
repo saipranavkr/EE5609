@@ -243,7 +243,7 @@ columns=fullflexible
 %{\underline{\Large \bf Determinant}}
 \end{center}
 \begin{abstract}
-This document explains the commutativity of transformations
+This document contains the concept of linear transformations
 \end{abstract}
 Download all python codes from 
 %
@@ -262,39 +262,20 @@ Find two linear operators $\vec{T}$ and $\vec{U}$ on $\vec{R}^2$ such that $\vec
 %
 %
 \section{Solution}
-Let a vector,
-\begin{align}\label{eq:eq_1}
-    \vec{X} = \myvec{x \\ y} \in \vec{R^2} \quad x,y \neq 0
-\end{align}
 Let,
-\begin{align}
-   \vec{T}(\vec{X}) = \vec{A} \vec{X}; \quad
-   \vec{U}(\vec{X}) = \vec{B} \vec{X}; \label{eq:eq_2}
+\begin{align}\label{eq:eq_1}
+    \vec{x}, \vec{y} \in \vec{R^2}
 \end{align}
-such that
+Let $\vec{T}$ and $\vec{U}$ be given by the matrices
 \begin{align}
-    \vec{A} = \myvec{0 & 1 \\ 0 & 0}; \quad \vec{B} = \myvec{1 & 0 \\ 0 & 0} \label{eq:eq_3}
-\end{align}
-Consider,
-\begin{align}
-    \vec{T}\vec{U} : \vec{R^2} \rightarrow \vec{R^2} \nonumber
+    \vec{A} = \myvec{0 & 1 \\ 0 & 0}; \quad \vec{B} = \myvec{1 & 0 \\ 0 & 0} \label{eq:eq_2}
 \end{align}
 \begin{align}
-    (\vec{T}\vec{U})(\vec{X}) = \vec{T}(\vec{U}(\vec{X})) = \vec{T}(\vec{B} \vec{X}) = \vec{A}\vec{B} \vec{X} \label{eq:eq_4}
+    \vec{T}(a\vec{x} + \vec{y}) = a \vec{T}\vec{x} + \vec{T} \vec{y} \label{eq:eq_3} \\
+    \vec{U}(a\vec{x} + \vec{y}) = a \vec{U}\vec{x} + \vec{U} \vec{y} \label{eq:eq_4}
 \end{align}
-Simplifying \eqref{eq:eq_4},
-\begin{align}\label{eq:eq_5}
-    \vec{A}\vec{B}\vec{X} = \myvec{0 \\ 0} \quad \implies \vec{T}\vec{U} = 0
-\end{align}
-Now since,
+From \eqref{eq:eq_3} and \eqref{eq:eq_4}, we can tell that $\vec{T}$ and $\vec{U}$ are linear operators. Also,
 \begin{align}
-    \vec{U}\vec{T} : \vec{R^2} \rightarrow \vec{R^2} \nonumber
-\end{align}
-\begin{align}
-    (\vec{U}\vec{T})(\vec{X}) = \vec{U}(\vec{T}(\vec{X})) = \vec{U}(\vec{A} \vec{X}) = \vec{B}\vec{A} \vec{X} \label{eq:eq_6} 
-\end{align}
-Simplifying \eqref{eq:eq_6},
-\begin{align} \label{eq:eq_7}
-    \vec{B}\vec{A} \vec{X} \neq \myvec{0 \\ 0} \quad \implies \vec{U}\vec{T} \neq 0
+    \vec{T}\vec{U} = 0; \quad \vec{U}\vec{T} \neq 0 
 \end{align}
 \end{document}
