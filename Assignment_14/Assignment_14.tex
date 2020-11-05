@@ -275,28 +275,16 @@ Let,
 \begin{align}
     z = x+iy; \quad w = a+ib; \quad z,w \in \vec{C} \nonumber
 \end{align}
+The representation of a complex number $z = x+iy$ in matrix form is:
 \begin{align}
-    \vec{T} (\alpha z + w) = \vec{T} ((\alpha x + a) + i(\alpha y + b)) = \nonumber \\ 
-    \myvec{(\alpha x + a) + 7(\alpha y + b) & 5(\alpha y + b) \\ -10(\alpha y + b) & (\alpha x + a) - 7(\alpha y + b)} = \nonumber \\
-    \myvec{\alpha (x+7y)+(a+7b) & \alpha (5y)+5b \\ 
-    \alpha(-10y)-10b & \alpha (x-7y)+(a-7b)} = \nonumber \\
-    \alpha \myvec{x + 7y & 5y \\ -10y & x-7y} + \myvec{a + 7b & 5b \\ -10b & a-7b} = \nonumber
+    \vec{z} = \myvec{x & -y \\ y & x} \label{eq:eq_2}
 \end{align}
+Also the RHS of \eqref{eq:eq_1} can be expressed as,
 \begin{align}
-    \alpha \vec{T}(z) + \vec{T}(w) \label{eq:eq_2}
+    \myvec{x + 7y & 5y \\ -10y & x-7y} = \myvec{\myvec{1 & 7 \\ 0 & -10} \myvec{x \\ y} & \myvec{5 & 0 \\ -7 & -1} \myvec{y \\ -x}} \label{eq:eq_3}
 \end{align}
-\eqref{eq:eq_2} proves $\vec{T}$ is a linear operator. Suppose,
+The transformation of \eqref{eq:eq_2} is \eqref{eq:eq_3}
 \begin{align}
-    \vec{T} (z) &= \vec{T} (w) \nonumber \\
-    \implies \myvec{x + 7y & 5y \\ -10y & x-7y} &= 
-    \myvec{a + 7b & 5b \\ -10b & a-7b} \label{eq:eq_3}
+    \vec{T} (\vec{z}) = \myvec{\myvec{1 & 7 \\ 0 & -10} \myvec{x \\ y} & \myvec{5 & 0 \\ -7 & -1} \myvec{y \\ -x}}
 \end{align}
-By comparing terms of \eqref{eq:eq_3},
-\begin{align}
-    x = a; \quad y = b; \quad \implies x + iy = a + ib \nonumber \\
-\end{align}
-\begin{align}
-    \implies z = w
-\end{align}
-Hence, $\vec{T}$ is a one-one transformation
 \end{document}
