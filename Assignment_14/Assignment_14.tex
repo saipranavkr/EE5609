@@ -275,16 +275,30 @@ Let,
 \begin{align}
     z = x+iy; \quad w = a+ib; \quad z,w \in \vec{C} \nonumber
 \end{align}
-The representation of a complex number $z = x+iy$ in matrix form is:
-\begin{align}
-    \vec{z} = \myvec{x & -y \\ y & x} \label{eq:eq_2}
-\end{align}
 Also the RHS of \eqref{eq:eq_1} can be expressed as,
 \begin{align}
-    \myvec{x + 7y & 5y \\ -10y & x-7y} = \myvec{\myvec{1 & 7 \\ 0 & -10} \myvec{x \\ y} & \myvec{5 & 0 \\ -7 & -1} \myvec{y \\ -x}} \label{eq:eq_3}
+    \vec{T} (\vec{z}) &= \myvec{\myvec{1 & 7 \\ 0 & -10} \myvec{x \\ y} & \myvec{0 & 5 \\ 1 & -7} \myvec{x \\ y}} \nonumber \\ 
+    &= \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} \myvec{x & 0 \\ y & 0 \\ 0 & x \\ 0 & y} \nonumber \\
+    &= \myvec{\vec{A} & \vec{B}} \myvec{\vec{x} & 0 \\ 0 & \vec{x}} \label{eq:eq_2}
 \end{align}
-The transformation of \eqref{eq:eq_2} is \eqref{eq:eq_3}
+where $\vec{A}$ and $\vec{B}$ are block matrices and,
 \begin{align}
-    \vec{T} (\vec{z}) = \myvec{\myvec{1 & 7 \\ 0 & -10} \myvec{x \\ y} & \myvec{5 & 0 \\ -7 & -1} \myvec{y \\ -x}}
+    \vec{x} = \myvec{x \\ y} \nonumber 
 \end{align}
+Consider,
+\begin{align}
+    \vec{T} (\alpha \vec{z} + \vec{w}) = 
+    \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} 
+    \myvec{\alpha x+a & 0 \\ \alpha y+b & 0 \\ 0 & \alpha x+a \\ 0 & \alpha y+b} \nonumber \\
+    = \myvec{(\alpha x+a)+7(\alpha y+b) & 5(\alpha y+b) \\ -10(\alpha y+b) & (\alpha x+a)-7(\alpha y+b)} \nonumber \\
+    = \alpha \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} \myvec{x & 0 \\ y & 0 \\ 0 & x \\ 0 & y} + \nonumber \\
+    \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} \myvec{a & 0 \\ b & 0 \\ 0 & a \\ 0 & b} \nonumber 
+\end{align}
+So,
+\begin{align}
+    \vec{T} (\alpha \vec{z} + \vec{w}) &= 
+    \alpha \myvec{\vec{A} & \vec{B}}\myvec{\vec{x} & 0 \\ 0 & \vec{x}} + \myvec{\vec{A} & \vec{B}} \myvec{\vec{w} & 0 \\ 0 & \vec{w}} \nonumber \\
+    &= \alpha \vec{T} (\vec{z}) + \vec{T} (\vec{w}) \label{eq:eq_3}
+\end{align}
+From \eqref{eq:eq_3}, $\vec{T}$ is a linear operator.
 \end{document}
