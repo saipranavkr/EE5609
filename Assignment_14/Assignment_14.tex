@@ -265,10 +265,22 @@ Let $\vec{V}$ be the set of complex numbers regarded as a vector space over the 
 Verify that T is a one-one (real) linear transformation of $\vec{V}$ into the space of $2 \times 2$ real matrices.
 %
 %
+\section{Theory}
+The kronecker product also called as matrix direct product is defined as \begin{align}
+    \vec{A} \otimes \vec{B} = \myvec{a_{11}\vec{B} & \cdots & a_{1n}\vec{B} \\ \vdots & \ddots & \vdots \\
+    a_{m1}\vec{B} & \cdots & a_{mn}\vec{B}} \label{eq:eq_21}
+\end{align}
+Also,
+\begin{align}
+    \vec{A} \otimes (\vec{B}+\vec{C}) &=
+    \vec{A} \otimes \vec{B} + \vec{A} \otimes \vec{C} \label{eq:eq_22} \\
+    \vec{A} \otimes (k\vec{B}) &= 
+     k (\vec{A} \otimes \vec{B}) \label{eq:eq_23}
+\end{align}
 \section{Solution}
 Given,
 \begin{align}
-    \vec{T} : \vec{C}\rightarrow \vec{R^2} \nonumber \\
+    \vec{T} : \vec{C}\rightarrow \vec{R^{2\times2}} \nonumber \\
     \vec{T}(x+iy) = \myvec{x + 7y & 5y \\ -10y & x-7y} \label{eq:eq_1}
 \end{align}
 Let,
@@ -285,20 +297,26 @@ where $\vec{A}$ and $\vec{B}$ are block matrices and,
 \begin{align}
     \vec{x} = \myvec{x \\ y} \nonumber 
 \end{align}
+The diagonal block matrix can be expressed as the kronecker product of $\vec{I}$ and $\vec{x}$
+\begin{align} 
+    \vec{I} \otimes \vec{x} = \myvec{\vec{x} & 0 \\ 0 & \vec{x}} \label{eq:eq_3}
+\end{align}
+Where $\vec{I}$ is an identity matrix. \eqref{eq:eq_2} can be rewritten as,
+\begin{align}
+    \vec{T} (\vec{z}) = \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes \vec{x}) \label{eq:eq_4}
+\end{align}
 Consider,
 \begin{align}
-    \vec{T} (\alpha \vec{z} + \vec{w}) = 
-    \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} 
-    \myvec{\alpha x+a & 0 \\ \alpha y+b & 0 \\ 0 & \alpha x+a \\ 0 & \alpha y+b} \nonumber \\
-    = \myvec{(\alpha x+a)+7(\alpha y+b) & 5(\alpha y+b) \\ -10(\alpha y+b) & (\alpha x+a)-7(\alpha y+b)} \nonumber \\
-    = \alpha \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} \myvec{x & 0 \\ y & 0 \\ 0 & x \\ 0 & y} + \nonumber \\
-    \myvec{1 & 7 & 0 & 5\\ 0 & -10 & 1 & -7} \myvec{a & 0 \\ b & 0 \\ 0 & a \\ 0 & b} \nonumber 
+    \vec{T}(\alpha \vec{z} + \vec{w}) = \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes (\alpha \vec{z} + \vec{w})) \nonumber 
 \end{align}
-So,
+Using properties \eqref{eq:eq_22}, \eqref{eq:eq_23}, the above equation can be expressed as,
 \begin{align}
-    \vec{T} (\alpha \vec{z} + \vec{w}) &= 
-    \alpha \myvec{\vec{A} & \vec{B}}\myvec{\vec{x} & 0 \\ 0 & \vec{x}} + \myvec{\vec{A} & \vec{B}} \myvec{\vec{w} & 0 \\ 0 & \vec{w}} \nonumber \\
-    &= \alpha \vec{T} (\vec{z}) + \vec{T} (\vec{w}) \label{eq:eq_3}
+    \vec{T}(\alpha \vec{z} + \vec{w}) &=  
+    \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes (\alpha \vec{z})) +
+    \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes \vec{x}) \nonumber \\
+    &= \alpha \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes \vec{z}) + 
+    \myvec{\vec{A} & \vec{B}} (\vec{I} \otimes \vec{w}) \nonumber \\ 
+    &= \alpha \vec{T} (\vec{z}) + \vec{T} (\vec{w})\label{eq:eq_5}
 \end{align}
-From \eqref{eq:eq_3}, $\vec{T}$ is a linear operator.
+From \eqref{eq:eq_5}, it can be proved that $\vec{T}$ is a linear operator.
 \end{document}
