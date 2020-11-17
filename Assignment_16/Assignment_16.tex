@@ -303,4 +303,32 @@ where,
     \alpha_2 &= \frac{-1}{6} + \frac{1}{2}x^2 \label{3_4} \\
     \alpha_3 &= \frac{-1}{3} + x + \frac{-1}{2}x^2 \label{3_5} 
 \end{align}
+
+\section{Proof}
+Let the indexed vector sets,
+\begin{align}
+    \vec{V} = \{f_1, f_2, f_3\}; \: \vec{V}^* = \{\alpha_1, \alpha_2, \alpha_3\} \nonumber 
+\end{align}
+To prove \eqref{eq:2_1}, we have to prove that elements pair have an inner product equal to 1 if the indexes are equal, and equal to 0 otherwise. 
+\begin{align} \label{eq:4_1}
+    \implies f_i^T\alpha_j = \delta_j^{i} = 
+    \bigg\{_{0; \quad if \: i \neq j}^{1; \quad if \: i = j} 
+\end{align}
+where, $\delta_j^{i}$ is the kronecker delta symbol.
+Now,
+\begin{align}
+    f_1^T\alpha_1 = \myvec{1 \\ \frac{1}{2} \\ \frac{1}{3}}^T 
+    \myvec{1 \\ 1 \\ -\frac{3}{2}} = 1 \label{eq:4_2} \\
+    f_1^T\alpha_2 = \myvec{1 \\ \frac{1}{2} \\ \frac{1}{3}}^T 
+    \myvec{-\frac{1}{6} \\ 0 \\ \frac{1}{2}} = 0 \label{eq:4_3}
+\end{align}
+\begin{align}
+    f_1^T\alpha_3 = \myvec{1 \\ \frac{1}{2} \\ \frac{1}{3}}^T 
+    \myvec{-\frac{1}{3} \\ 1 \\ -\frac{1}{2}} = 0 \label{eq:4_4}
+\end{align}
+Similarly, the same can be proved for $f_2, f_3$ as well in the same manner as \eqref{eq:4_2}-\eqref{eq:4_4}. Hence we can tell that,
+\begin{align}
+    \vec{V}^T\vec{V^*} &= \vec{I} \nonumber \\
+    \implies \vec{V^*} &= (\vec{V}^T)^{-1}
+\end{align}
 \end{document}
