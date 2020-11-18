@@ -278,33 +278,6 @@ Given the basis $\vec{F}$ and corresponding dual basis $\vec{G}$, the defining p
 \end{align}
 
 \section{Solution}
-\begin{align}
-    f_1(p) &= \int_{0}^{1} p(x) \, dx = c_0 + \frac{1}{2}c_1 + \frac{1}{3}c_2 \nonumber \\
-    f_2(p) &= \int_{0}^{2} p(x) \, dx = 2c_0 + 2c_1 + \frac{8}{3}c_2 \nonumber \\
-    f_3(p) &= \int_{0}^{-1} p(x) \, dx = -c_0 + \frac{1}{2}c_1 + \frac{-1}{3}c_2 \nonumber
-\end{align}
-Expressing $\{f_1, f_2, f_3\}$ as basis in terms of a matrix,
-\begin{align}
-    \vec{V} = \{f_1, f_2, f_3\} = 
-    \myvec{1 & \frac{1}{2} & \frac{1}{3} \\ 2 & 2 & \frac{8}{3} \\ -1 & \frac{1}{2} & \frac{-1}{3}} \label{eq:3_1}
-\end{align}
-Finding the dual basis for \eqref{eq:3_1} using \eqref{eq:2_1}, 
-\begin{align}
-    \vec{V}^* &= (\vec{V}^{-1})^T \nonumber \\
-    &= \myvec{1 & 1 & \frac{-3}{2} \\ \frac{-1}{6} & 0 & \frac{1}{2} \\ \frac{-1}{3} & 1 & \frac{-1}{2}} \label{eq:3_2}
-\end{align}
-The dual basis \eqref{eq:3_2} can be expressed as,
-\begin{align}
-    \vec{V}^* = \{\alpha_1, \alpha_2, \alpha_3\} \nonumber 
-\end{align}
-where,
-\begin{align}
-    \alpha_1 &= 1 + x - \frac{3}{2}x^2 \label{3_3} \\
-    \alpha_2 &= \frac{-1}{6} + \frac{1}{2}x^2 \label{3_4} \\
-    \alpha_3 &= \frac{-1}{3} + x + \frac{-1}{2}x^2 \label{3_5} 
-\end{align}
-
-\section{Proof}
 Let the indexed vector sets,
 \begin{align}
     \vec{V} = \{f_1, f_2, f_3\}; \: \vec{V}^* = \{\alpha_1, \alpha_2, \alpha_3\} \nonumber 
@@ -372,14 +345,15 @@ From \eqref{eq:4_5}, \eqref{eq:4_7} and \eqref{eq:4_8}, the rows of $\vec{P}$ ar
     0 & 1 & 0 & \frac{-1}{6} & 0 & \frac{1}{2} \\
     0 & 0 & 1 & \frac{-1}{3} & 1 & \frac{-1}{2}} \label{eq:4_9}
 \end{align}
-From \eqref{eq:4_9}, the dual of $\vec{V} \implies \vec{V^*}$ can be written as,
+From \eqref{eq:4_9}, the dual of $\vec{V} \implies \vec{V^*}$ can be written in matrix form as,
 \begin{align}
-    \vec{V^*} = \myvec{\alpha_1 & \alpha_2 & \alpha_3} \label{eq:4_10}
+    \vec{V^*} = \vec{A}\vec{x} \label{eq:4_10}
 \end{align}
 where,
 \begin{align}
-    \alpha_1 &= 1 + x - \frac{3}{2}x^2 \\
-    \alpha_2 &= \frac{-1}{6} + \frac{1}{2}x^2 \\
-    \alpha_3 &= \frac{-1}{3} + x + \frac{-1}{2}x^2
+    \vec{A} = \myvec{1 & 1 & \frac{-3}{2} \\
+    \frac{-1}{6} & 0 & \frac{1}{2} \\
+    \frac{-1}{3} & 1 & \frac{-1}{2}}; \quad 
+    \vec{x} = \myvec{1 \\ x \\ x^2} \nonumber
 \end{align}
 \end{document}
