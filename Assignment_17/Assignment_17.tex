@@ -266,53 +266,55 @@ on $\vec{F}^n$ which satisfy $c_1 + \hdots + c_n = 0$
 %
 %
 \section{Solution}
-Given,
-\begin{align}
-    &x_1+ \hdots+x_n = 0; \: (x_1, \hdots , x_n) \in \vec{W} \nonumber \\ 
-    &\implies dim(\vec{W}) = n-1 \label{eq:2_1}
-\end{align}
-We know that dual spaces have the same dimension. So,
-\begin{align}
-    dim(\vec{W}) = dim(\vec{W^*}) = n-1 \label{eq:2_2}
-\end{align}
-Let,
-\begin{align}
-    \alpha_i = \epsilon_1 - \epsilon_{i+1}; \quad i \in \{1,\hdots, n-1\} \label{eq:2_3}
-\end{align}
-where, $(\epsilon_1, \hdots, \epsilon_n)$ are the standard basis for $\vec{F}^n$. 
-\begin{align}
-    &\sum_{i=1}^{n-1} c_i \alpha_i = 0 \nonumber \\
-    \implies &\left(\sum_{i=1}^{n-1} c_i \right) \epsilon_1 - \sum_{i=1}^{n-1} c_i \epsilon_{i+1} = 0 \label{eq:2_4}
-\end{align}
-From \eqref{eq:2_4}, $(\alpha_1, \hdots, \alpha_{n-1})$ are linearly independent and form a basis for $\vec{W}$. Now, in order to identify an element of $\vec{W}^*$ with an unique element in $\vec{W}$, consider,
-\begin{align} \label{eq:2_5}
-    \vec{W} \xrightarrow{P} (\vec{F}^n)^* \xrightarrow{Q} \vec{W}^*
-\end{align}
-The function $P$ is defined as,
-\begin{align}
-    P(c_1,\hdots,c_n) = f_{c_1,\hdots,c_n} \label{eq:2_6}
-\end{align}
-where,
-\begin{align}
-    f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n \label{eq:2_7}
-\end{align}
-Let,
-\begin{align}
-    Q \circ P (c_1,\hdots,c_n) = 0; \quad (c_1,\hdots,c_n) \in \vec{W} \nonumber \\
-    Q(f_{c_1,\hdots,c_n}) = 0 \implies f_{c_1,\hdots,c_n|W} = 0 \nonumber \\
-    \implies f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = 0 \label{eq:2_8}
-\end{align}
-Thus,
-\begin{align}
-    f_{c_1,\hdots,c_n}(\alpha_i) = 0; \quad i = 1,\hdots,n-1 \nonumber \\
-    \implies c_1 = c_i; \quad i = 2,\hdots,n \nonumber \\
-    \implies \sum_{i=2}^n c_i = (n-1)c_1 \label{eq:2_9}
-\end{align}
-since $(c_1,\hdots,c_n) \in \vec{W}$
-\begin{align}
-    &\sum_{i=1}^n c_i = 0 \nonumber \\
-    &\implies c_1 = 0 \nonumber \\
-    &\implies c_i = 0 \; ; \quad i = 1,\hdots,n \label{eq:2_10}
-\end{align}
-Hence, $f_{c_1,\hdots,c_n}$ is a zero function. Thus the mapping $\vec{W} \xrightarrow{} \vec{W}^*$ is a natural isomorphism
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+& \\
+Given & $x_1+ \hdots+x_n = 0$ \\
+& $(x_1, \hdots , x_n) \in \vec{W}$\\
+& $F$ is a field\\
+& $\vec{W}^*$ is dual space of $\vec{W}$ \\
+& \\
+\hline
+& \\
+To prove & $\vec{W} \xrightarrow{} \vec{W}^*$ is a natural isomorphism\\
+& $f(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n$\\
+& which satisfy $c_1 + \hdots + c_n = 0$\\
+& \\
+\hline
+& \\
+Proof & Let $\alpha_i = \epsilon_1 - \epsilon_{i+1}$ \\ 
+& $\quad i \in \{1,\hdots, n-1\}$ \\
+& \\
+& $\sum_{i=1}^{n-1} c_i \alpha_i = 0$ \\
+& $\implies \left(\sum_{i=1}^{n-1} c_i \right) \epsilon_1 - \sum_{i=1}^{n-1} c_i \epsilon_{i+1} = 0$ \\
+& $(\alpha_1, \hdots, \alpha_{n-1})$ are linearly independent \\
+& and form a basis for $\vec{W}$ \\
+& \\
+& $\vec{W} \xrightarrow{P} (\vec{F}^n)^* \xrightarrow{Q} \vec{W}^*$ \\
+& The function $P$ is defined as \\
+& $P(c_1,\hdots,c_n) = f_{c_1,\hdots,c_n}$; where, \\
+& $f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n$ \\
+& \\
+& Let $Q \circ P (c_1,\hdots,c_n) = 0; \: (c_1,\hdots,c_n) \in \vec{W}$ \\
+& $Q(f_{c_1,\hdots,c_n}) = 0 \implies f_{c_1,\hdots,c_n|W} = 0$ \\
+& $\implies f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = 0$ \\
+& \\
+& $f_{c_1,\hdots,c_n}(\alpha_i) = 0; \quad i = 1,\hdots,n-1$ \\
+& $\implies c_1 = c_i; \quad i = 2,\hdots,n$ \\
+& $\implies \sum_{i=2}^n c_i = (n-1)c_1$ \\
+& \\
+& since $(c_1,\hdots,c_n) \in \vec{W}$ \\
+& $\sum_{i=1}^n c_i = 0$ \\
+& $\implies c_1 = 0$ \\
+& $\implies c_i = 0 \; ; \quad i = 1,\hdots,n$ \\
+& \\
+& Hence, $f_{c_1,\hdots,c_n}$ is a zero function. \\
+& Thus the mapping $\vec{W} \xrightarrow{} \vec{W}^*$ \\
+& is a natural isomorphism \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \end{document}
