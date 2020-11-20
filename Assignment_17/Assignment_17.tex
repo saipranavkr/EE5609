@@ -265,8 +265,25 @@ Let n be a positive integer and F a field. Let $\vec{W}$ be the set of all vecto
 on $\vec{F}^n$ which satisfy $c_1 + \hdots + c_n = 0$
 %
 %
+\section{Pictorial Representation}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.5]{W_Nullspace.png}
+\caption{$\vec{W}$ of dimension n-1, is the null space of $\vec{F}$, where $(a_1,\hdots, a_{n-1})$ are basis vectors for $\vec{W}$}
+\end{figure}
+\pagebreak
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{WtoFn.png}
+\caption{Mapping from $\vec{W} \xrightarrow{P} \vec{F_N}^*$, where \\ $P(c_1,\hdots,c_n) = f_{c_1,\hdots,c_n}$, $f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n$} 
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Wdualmap.png}
+\caption{Mapping from $\vec{F_N}^* \xrightarrow{Q} \vec{W}^*$, where \\ $f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n$ is the linear functional with $c_1+\hdots+c_n=0$} 
+\end{figure}
 \section{Solution}
-\begin{table}[h!]
+\begin{table}[ht]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -289,15 +306,16 @@ Proof & Let $\alpha_i = \epsilon_1 - \epsilon_{i+1}$ \\
 & \\
 & $\sum_{i=1}^{n-1} c_i \alpha_i = 0$ \\
 & $\implies \left(\sum_{i=1}^{n-1} c_i \right) \epsilon_1 - \sum_{i=1}^{n-1} c_i \epsilon_{i+1} = 0$ \\
-& $(\alpha_1, \hdots, \alpha_{n-1})$ are linearly independent \\
-& and form a basis for $\vec{W}$ \\
+& $(\alpha_1, \hdots, \alpha_{n-1})$ are linearly\\
+& independent and form a basis for $\vec{W}$ \\
 & \\
 & $\vec{W} \xrightarrow{P} (\vec{F}^n)^* \xrightarrow{Q} \vec{W}^*$ \\
 & The function $P$ is defined as \\
 & $P(c_1,\hdots,c_n) = f_{c_1,\hdots,c_n}$; where, \\
 & $f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = c_1x_1 + \hdots c_nx_n$ \\
 & \\
-& Let $Q \circ P (c_1,\hdots,c_n) = 0; \: (c_1,\hdots,c_n) \in \vec{W}$ \\
+& Let $Q \circ P (c_1,\hdots,c_n) = 0;$ \\
+& $(c_1,\hdots,c_n) \in \vec{W}$ \\
 & $Q(f_{c_1,\hdots,c_n}) = 0 \implies f_{c_1,\hdots,c_n|W} = 0$ \\
 & $\implies f_{c_1,\hdots,c_n}(x_1, \hdots , x_n) = 0$ \\
 & \\
