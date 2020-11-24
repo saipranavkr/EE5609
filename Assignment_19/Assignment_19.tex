@@ -262,45 +262,48 @@ If A is a complex $5 \times 5$ matrix with characteristic polynomial $f = (x-2)^
 %
 %
 \section{Theory}
-\begin{table}[ht]
+Table \ref{table:1} gives the overview of properties of a Jordan block based on characteristic polynomial, minimal polynomial, algebraic multiplicity and geometric multiplicity.
+\begin{table*}[ht]
 \begin{center}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-& \\
-Jordan block & For an eigenvalue $\lambda$ \\
-& \\
-\hline
-
-& \\
-characteristic & The multiplicity of $\lambda$\\
-polynomial & in the characteristic polynomial\\
-& determines the size of the\\
-& Jordan block for that eigenvalue.\\
-& \\
+& &\\
+Feature & Effect on Jordan block & Example\\
+& &\\
 \hline
 
-& \\
-minimal & The multiplicity of $\lambda$\\
-polynomial & in the minimal polynomial \\
-& determines the size of\\
-& the largest sub-block\\
-& (Elementary Jordan block). \\
-& \\
+& &\\
+characteristic & The multiplicity of $\lambda$ & Let, $f = (x-2)^4$ be characteristic polynomial\\
+polynomial or & in the characteristic polynomial & $\vec{J} = \myvec{2 & * & 0 & 0 \\ 0 & 2 & * & 0 \\ 0 & 0 & 2 & * \\ 0 & 0 & 0 & 2}$\\
+Algebraic & determines the size of the & where $*$ can be either 1 or 0\\
+multiplicity & Jordan block for that eigenvalue.&\\
+& $A_M$ = Size of Jordan block for $\lambda$& \\
+& &\\
+\hline
+
+& & \\
+Geometric & The geometric multiplicity & If $A_M = 4; \: G_M = 2; \: \lambda = 2$\\
+multiplicity & determines the total number of & $\implies$ There should be 2 Jordan sub blocks\\ 
+& Jordan sub blocks for $\lambda$ & for $\lambda = 2$. So, $\vec{J}$ has 2 possibilities\\
+& & $\vec{J} = \myvec{2 & 1 & 0 & 0 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2}$;\: or $\vec{J} = \myvec{2 & 1 & 0 & 0 \\ 0 & 2 & 1 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 2}$\\
+\hline
+
+& &\\
+minimal & The multiplicity of $\lambda$ & Let $p = (x-2)^3$ be minimal polynomial\\
+polynomial & in the minimal polynomial& $\implies$ Size of largest sub-block is 3\\
+& determines the size of & Hence, one sub-block of size 3 and\\
+& the largest sub-block & one sub-block of size 1\\
+& (Elementary Jordan block).& $\vec{J} = \myvec{2 & 1 & 0 & 0 \\ 0 & 2 & 1 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 2}$\\
+& &\\
 \hline
 \end{tabular}
+\caption{Properties of Jordan blocks and Jordan canonical form}
+\label{table:1}
 \end{center}
-\end{table}
-Let $f$ and $p$ be the characteristic and minimal polynomials of a matrix,
-\begin{align}
-    f = (x-\lambda_1)^3 \label{eq:2_1} \\
-    p = (x-\lambda_1)^2 \label{eq:2_2}
-\end{align}
-To satisfy both \eqref{eq:2_1} and \eqref{eq:2_2}, the size of Jordan block must be 3 and the largest block should be of size 2. Hence, Jordan form is written as,
-\begin{align}
-    \vec{J} = \myvec{\lambda_1 & 1 & 0 \\ 0 & \lambda_1 & 0 \\ 0 & 0 & \lambda_1}
-\end{align}
+\end{table*}
+
 \section{Solution}
-Based on \eqref{eq:2_1} and \eqref{eq:2_2}, the Jordan blocks for eigenvalues of $\vec{A}$ can be written as,
+From the properties stated in table \ref{table:1}, the Jordan blocks for eigenvalues of $\vec{A}$ can be written as,
 \begin{align}
     \vec{J_1} = \myvec{2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 2}; \quad 
     \vec{J_2} = \myvec{-7 & 0 \\ 0 & -7} \label{eq:3_1}
